@@ -2,10 +2,18 @@ package com.zainco.daggerpractice.inflow
 
 import dagger.Module
 import dagger.Binds
+import dagger.Provides
 
 
 @Module
-abstract class DieselEngineModule {
-    @Binds
-     abstract fun bindEngine(engine: DieselEngine): Engine
+class DieselEngineModule constructor(val horsePower: Int) {
+    @Provides
+    fun provideHorsePower(): Int {
+        return horsePower
+    }
+
+    @Provides
+    fun provideEngine(dieselEngine: DieselEngine): Engine {
+        return dieselEngine
+    }
 }

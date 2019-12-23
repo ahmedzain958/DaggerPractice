@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.zainco.daggerpractice.R.layout.activity_main)
-        val component = DaggerCarComponent.create()
+        val component = DaggerCarComponent.builder()
+            .horsePower(100)
+
 //        car = component.getCar()
         component.inject(this)
         car.drive()

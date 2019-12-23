@@ -4,7 +4,8 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class WheelsModule {
+ class WheelsModule {
+
     @Provides
     fun provideRims(): Rims {
         return Rims()
@@ -21,4 +22,5 @@ class WheelsModule {
     fun provideWheels(rims: Rims, tires: Tires): Wheels {
         return Wheels(tires, rims)
     }
+
 }
