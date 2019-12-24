@@ -7,8 +7,8 @@ import javax.inject.Named
 
 class PatrolEngine @Inject
 constructor(
-    @Named("horsePower") val horsePower: Int,
-    @Named("engineCapacity") val engineCapacity: Int
+    @Named("horse Power") val horsePower: Int,
+    @Named("engine Capacity") val engineCapacity: Int
 ) :
     Engine {
     private val TAG = "Car"

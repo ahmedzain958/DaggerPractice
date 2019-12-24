@@ -14,9 +14,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(com.zainco.daggerpractice.R.layout.activity_main)
         val component = DaggerCarComponent.builder()
             .horsePower(100)
-
-//        car = component.getCar()
-        component.inject(this)
         car.drive()
     }
 }

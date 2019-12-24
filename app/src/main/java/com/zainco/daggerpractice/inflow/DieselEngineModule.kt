@@ -1,7 +1,6 @@
 package com.zainco.daggerpractice.inflow
 
 import dagger.Module
-import dagger.Binds
 import dagger.Provides
 
 
